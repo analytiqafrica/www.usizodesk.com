@@ -201,56 +201,56 @@
 
 
 	// PORTFOLIO-SLIDE
-	new Swiper(".portfolio-slide", {
-		slidesPerView: 4,
-		spaceBetween: 20,
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            600: {
-                slidesPerView: 2,
-                spaceBetween: 10
-            },
-            990: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            1400: {
-                slidesPerView: 4,
-                spaceBetween: 30
-            }
+	// new Swiper(".portfolio-slide", {
+	// 	slidesPerView: 4,
+	// 	spaceBetween: 20,
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 10
+    //         },
+    //         600: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 10
+    //         },
+    //         990: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 30
+    //         },
+    //         1400: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 30
+    //         }
 
-        }
-	});
+    //     }
+	// });
 
-
-	/*-----SLIDE SCRIPS-----*/
-	new Swiper(".testimonial-slide", {
-		slidesPerView: 1,
-	});
 
 	/*-----SLIDE SCRIPS-----*/
-	new Swiper(".testimonial-slide-2", {
-		slidesPerView: 3,
-		spaceBetween: 20,
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 15
-            },
-            1200: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            }
+	// new Swiper(".testimonial-slide", {
+	// 	slidesPerView: 1,
+	// });
 
-        }
-	});
+	/*-----SLIDE SCRIPS-----*/
+	// new Swiper(".testimonial-slide-2", {
+	// 	slidesPerView: 3,
+	// 	spaceBetween: 20,
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 10
+    //         },
+    //         768: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 15
+    //         },
+    //         1200: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 20
+    //         }
+
+    //     }
+	// });
 
 	// PARALLAX SCRIPTS
 	$(".parallax-bg").each(function() {

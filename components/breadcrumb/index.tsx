@@ -22,6 +22,7 @@ export default function Breadcrumb() {
     <section
       className="page-top-wrapper parallax-img"
       data-img-src="/assets/img/bg/page-top.jpg"
+      style={{ backgroundImage: "url(/assets/img/bg/page-top.jpg)" }}
     >
       <span className="position-absolute line-shape d-lg-block d-none">
         <img src="/assets/img/bg/shape-2.png" alt="" />
