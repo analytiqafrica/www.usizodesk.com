@@ -1,0 +1,31 @@
+.header ul.dt-sc-list-inline.dt-desktop-menu.dt-nav {
+  z-index: 2;
+}
+
+ul.dt-nav > li.top-level-link {
+  display: inline-flex;
+}
+
+ul.dt-nav > li.top-level-link:first-child {
+  padding-left: 0;
+}
+
+ul.dt-nav > li.top-level-link a.dt-sc-nav-link {
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  border-radius: 0;
+}
+
+ul.dt-nav > li.top-level-link a.dt-sc-nav-link span:not(.dt-sc-caret) {
+  position: relative;
+  display: inline-flex;
+  -webkit-transition: var(--duration-short);
+  -o-transition: var(--duration-short);
+  transition: var(--duration-short);
+}
+
+a.header__icon:not(:last-child),
+.header__search {
+  margin-right: 3rem;
+}
