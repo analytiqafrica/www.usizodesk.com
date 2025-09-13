@@ -26,25 +26,22 @@ export default function Footer() {
             </div>
             <div className="col-lg-4 col-md-6 mb-30">
               <div className="footer-wrapper">
-                <h5 className="footer-title">Top Links</h5>
+                <h5 className="footer-title">Company</h5>
                 <div className="row">
                   <div className="col-6">
                     <div className="footer-link">
                       <ul className="reset-ul">
                         <li>
-                          <a href="about.html">Our project</a>
+                          <Link href={ERoutes.home}>Home</Link>
                         </li>
                         <li>
-                          <a href="about.html">About us</a>
+                          <Link href={ERoutes.about}>About</Link>
                         </li>
                         <li>
-                          <a href="about.html">New Camping</a>
+                          <Link href={ERoutes.contact}>Contact</Link>
                         </li>
                         <li>
-                          <a href="about.html">Voluntecry</a>
-                        </li>
-                        <li>
-                          <a href="about.html">Rceipes</a>
+                          <Link href={ERoutes.home}>Careers</Link>
                         </li>
                       </ul>
                     </div>
@@ -53,16 +50,16 @@ export default function Footer() {
                     <div className="footer-link">
                       <ul className="reset-ul">
                         <li>
-                          <a href="about.html">Return Result</a>
+                          <Link href={ERoutes.home}>Blog</Link>
                         </li>
                         <li>
-                          <a href="about.html">Eftective</a>
+                          <Link href={ERoutes.home}>Get Support</Link>
                         </li>
                         <li>
-                          <a href="about.html">Online Enquiry</a>
+                          <Link href={ERoutes.home}>Resource Hub</Link>
                         </li>
                         <li>
-                          <a href="about.html">Help & Ordering</a>
+                          <Link href={ERoutes.home}>Sitemap</Link>
                         </li>
                       </ul>
                     </div>
@@ -137,8 +134,8 @@ export default function Footer() {
             <div className="col-xl-6 col-lg-6 text-center text-lg-right">
               <div className="copyright">
                 <p>
-                  <Link href={ERoutes.home}>Usizo Desk</Link> &copy; {moment().format("Y")}
-                  . All Rights Reserved
+                  <Link href={ERoutes.home}>Usizo Desk</Link> &copy;{" "}
+                  {moment().format("Y")}. All Rights Reserved
                 </p>
               </div>
             </div>
