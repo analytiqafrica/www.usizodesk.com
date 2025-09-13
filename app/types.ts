@@ -3,6 +3,12 @@ export interface IEventLocation {
   city: string;
 }
 
+export interface IMenuItem {
+  title: string;
+  routeLink: string;
+  children?: IMenuItem[];
+}
+
 export interface IEvent {
   id: number | string;
   eventTitle: string;

@@ -1,208 +1,150 @@
-import { EModalIds, ERoutes } from "@/app/enums";
-import { useAppDispatch } from "@/app/store/hooks";
-import { showModal } from "@/app/store/reducers/modalReducer";
-import SectionFooterImg from "@/assets/images/section-footer.jpg";
-import FooterLogo from "@/assets/images/woi-logo-04@500.png";
-import Image from "next/image";
+import { ERoutes } from "@/app/enums";
 import Link from "next/link";
 import moment from "moment";
 
 export default function Footer() {
-  const dispatch = useAppDispatch();
   return (
-    <div className="shopify-section reveal">
-      <footer
-        id="Banner-footer"
-        className="index-footer footer color-background-1 gradient"
-      >
-        <div className="banner__media media">
-          <Image
-            src={SectionFooterImg}
-            height="1196.0"
-            loading="lazy"
-            sizes="100vw"
-            width="3840"
-            alt="WOI"
-          />
-        </div>
-        <div className="footer__content-top page-width">
+    <footer className="footer-area sec-pt-150 bg-dark">
+      <div className="footer-top">
+        <div className="container">
           <div className="row">
-            <div className="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet border-right section-footer-padding">
-              <div className="footer-block grid__item footer-text-heading left">
-                <div className="footer-block">
-                  <Link href={ERoutes.home}>
-                    <Image
-                      style={{ maxWidth: 150 }}
-                      src={FooterLogo}
-                      loading="lazy"
-                      height="100"
-                      width="220"
-                      alt="WOI"
-                    />
-                  </Link>
-                  <h2 className="footer-block__heading left">
-                    Empowering &amp; Inspiring South African Women
-                  </h2>
-                  <div className="footer-block__details-content rte left">
-                    <p>
-                      Our mission is to unite women across South Africa to
-                      advocate for equal rights, challenge gender narratives,
-                      and support one another in unlocking their full potential
-                    </p>
+            <div className="col-lg-4 col-md-6 mb-30">
+              <div className="footer-wrapper">
+                <div className="footer-logo">
+                  <a href=" ">
+                    <img src="/assets/img/logo-light.png" alt="" />
+                  </a>
+                </div>
+                <div className="footer-text">
+                  <p>
+                    In sem dignissim enim ante sescelerigsq. Nec the is
+                    misplaced that Cras.
+                  </p>
+                  <h5>Mirpur -12, Block-C, House-38 Dhaka, bangladesh.</h5>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mb-30">
+              <div className="footer-wrapper">
+                <h5 className="footer-title">Top Links</h5>
+                <div className="row">
+                  <div className="col-6">
+                    <div className="footer-link">
+                      <ul className="reset-ul">
+                        <li>
+                          <a href="about.html">Our project</a>
+                        </li>
+                        <li>
+                          <a href="about.html">About us</a>
+                        </li>
+                        <li>
+                          <a href="about.html">New Camping</a>
+                        </li>
+                        <li>
+                          <a href="about.html">Voluntecry</a>
+                        </li>
+                        <li>
+                          <a href="about.html">Rceipes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="footer-link">
+                      <ul className="reset-ul">
+                        <li>
+                          <a href="about.html">Return Result</a>
+                        </li>
+                        <li>
+                          <a href="about.html">Eftective</a>
+                        </li>
+                        <li>
+                          <a href="about.html">Online Enquiry</a>
+                        </li>
+                        <li>
+                          <a href="about.html">Help & Ordering</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="footer-block grid__item footer-block--menu footer-links footer-link_list-heading ">
-                <h2 className="footer-block__heading footer__title ">
-                  company
-                </h2>
-                <ul className="footer-block__details-content footer_menu list-unstyled ">
-                  <li>
-                    <Link
-                      href={ERoutes.home}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.about}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Our Story
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.programs}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Our Programs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.events}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Events Calendar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.subscribe}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Subscribe
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-block grid__item footer-block--menu footer-links footer-link_list-heading ">
-                <h2 className="footer-block__heading footer__title ">
-                  help &amp; support
-                </h2>
-                <ul className="footer-block__details-content footer_menu list-unstyled ">
-                  <li>
-                    <Link
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="tel:+27637016721"
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Call us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.contact}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Visit our offices
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="mailto:info@iamwoi.co.za"
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Drop us an email
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://wa.me/27637016721?text=Hello%20I%20am%20interested%20in%20your%20services"
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Message us on WhatsApp
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href=" "
-                      className="link link--text list-menu__item list-menu__item--link"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        dispatch(showModal({ id: EModalIds.becomeASponsor }));
-                      }}
-                    >
-                      Become a Sponsor
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-block grid__item footer-block--menu footer-links footer-link_list-heading ">
-                <h2 className="footer-block__heading footer__title ">legal</h2>
-                <ul className="footer-block__details-content footer_menu list-unstyled ">
-                  <li>
-                    <Link
-                      href={ERoutes.legal.disclaimer}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Disclaimer
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.legal.terms}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Terms of use
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={ERoutes.legal.privacy}
-                      className="link link--text list-menu__item list-menu__item--link"
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </div>
-            <div className="footer__content-bottom">
-              <div className="footer__content-bottom-wrapper">
-                <div className="footer__column footer__column--info">
-                  <div className="footer__copyright caption">
-                    <small className="copyright__content">
-                      <p>
-                        Copyright &copy; {moment().format("YYYY")} Women of
-                        Influence. All Right Reserved
-                      </p>
-                    </small>
+            <div className="col-lg-4 col-md-6 mb-30">
+              <div className="footer-wrapper">
+                <h5 className="footer-title">Recent Posts</h5>
+                <div className="footer-post d-flex align-items-center">
+                  <div className="footer-thum">
+                    <a href="blog-details.html">
+                      <img src="assets/img/footer/1.png" alt="" />
+                    </a>
+                  </div>
+                  <div className="footer-content">
+                    <h5>
+                      <a href="blog-details.html">
+                        Praesent eu lorem vitae quam ornare laoreet ac a urna.
+                      </a>
+                    </h5>
+                    <div className="footer-meta">
+                      <span className="date">Nov 19, 22.</span>
+                      <span className="comments"> 03 Comments</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="footer-post d-flex align-items-center">
+                  <div className="footer-thum">
+                    <a href="blog-details.html">
+                      <img src="assets/img/footer/2.png" alt="" />
+                    </a>
+                  </div>
+                  <div className="footer-content">
+                    <h5>
+                      <a href="blog-details.html">
+                        Praesent eu lorem vitae quam ornare laoreet ac a urna.
+                      </a>
+                    </h5>
+                    <div className="footer-meta">
+                      <span className="date">Nov 19, 22.</span>
+                      <span className="comments"> 03 Comments</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-lg-6 mb-2 mb-lg-0">
+              <div className="footer-bottom-link text-center text-lg-left">
+                <ul className="reset-ul">
+                  <li>
+                    <a href=" ">Home</a>
+                  </li>
+                  <li>
+                    <a href="about.html">Accessories </a>
+                  </li>
+                  <li>
+                    <a href="about.html">
+                      More <i className="fa fa-plus" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-xl-6 col-lg-6 text-center text-lg-right">
+              <div className="copyright">
+                <p>
+                  <Link href={ERoutes.home}>Usizo Desk</Link> &copy; {moment().format("Y")}
+                  . All Rights Reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

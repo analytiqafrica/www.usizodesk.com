@@ -6,6 +6,7 @@ import { store } from "@/app/store";
 import { theme } from "@/app/theme";
 import apolloClient from "@/lib/apollo-client";
 import GlobalStyle from "@/styles/globalstyles";
+import Seo from "@/components/seo";
 
 import "../index.scss";
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ApolloProvider client={apolloClient}>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
+          <Seo />
           <GlobalStyle />
           <Component {...pageProps} />
         </ThemeProvider>

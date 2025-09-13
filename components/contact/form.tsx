@@ -74,102 +74,55 @@ export default function Form() {
     <form
       method="post"
       id="ContactForm"
-      accept-charset="UTF-8"
+      acceptCharset="UTF-8"
       className="isolate"
       data-persist-bound="true"
       onSubmit={handleFormSubmit}
       noValidate
     >
-      <div className="contact__fields">
-        <div className={`field ${errors?.name ? "has-error" : ""}`}>
-          <input
-            className="field__input"
-            autoComplete="name"
-            type="text"
-            id="ContactForm-name"
-            placeholder="Name"
-            {...register("name")}
-          />
-          <label
-            className="field__label visually-hidden"
-            htmlFor="ContactForm-name"
-          >
-            Name
-          </label>
+      <div className="row">
+        <div className="col-md-6 mb-2">
+          <div className={`form-group ${errors?.email ? "has-error" : ""}`}>
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              {...register("email")}
+            />
+          </div>
         </div>
-        {errors?.name && (
-          <div className="error-message">{errors?.name?.message}</div>
-        )}
-        <div className={`field ${errors?.email ? "has-error" : ""}`}>
-          <input
-            autoComplete="email"
-            type="email"
-            id="ContactForm-email"
-            className="field__input"
-            spellCheck="false"
-            autoCapitalize="off"
-            aria-required="true"
-            placeholder="Email"
-            {...register("email")}
-          />
-          <label
-            className="field__label visually-hidden"
-            htmlFor="ContactForm-email"
-          >
-            Email <span aria-hidden="true">*</span>
-          </label>
+        <div className="col-md-6 mb-2">
+          <div className={`form-group ${errors?.email ? "has-error" : ""}`}>
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              {...register("email")}
+            />
+          </div>
         </div>
-        {errors?.email && (
-          <div className="error-message">{errors?.email?.message}</div>
-        )}
-        <div className={`field ${errors?.phone ? "has-error" : ""}`}>
-          <input
-            type="tel"
-            id="ContactForm-phone"
-            className="field__input"
-            autoComplete="tel"
-            placeholder="Phone number"
-            {...register("phone")}
-          />
-          <label
-            className="field__label visually-hidden"
-            htmlFor="ContactForm-phone"
-          >
-            Phone number
-          </label>
+        <div className="col-md-12 mb-2">
+          <div className={`form-group ${errors?.message ? "has-error" : ""}`}>
+            <label>Message</label>
+            <textarea
+              className="form-control"
+              placeholder="Enter your message..."
+              {...register("message")}
+            ></textarea>
+          </div>
         </div>
-        {errors?.phone && (
-          <div className="error-message">{errors?.phone?.message}</div>
+        {errors?.message && (
+          <div className="col-lg-12 mt-3 error-message">
+            {errors?.message?.message}
+          </div>
         )}
-      </div>
-      <div className={`field ${errors?.message ? "has-error" : ""}`}>
-        <textarea
-          rows={10}
-          id="ContactForm-body"
-          className="text-area field__input"
-          placeholder="Comment"
-          {...register("message")}
-        />
-        <label
-          className="form__label field__label visually-hidden"
-          htmlFor="ContactForm-body"
-        >
-          Comment
-        </label>
-      </div>
-      {errors?.message && (
-        <div className="error-message">{errors?.message?.message}</div>
-      )}
-      {/* <div className="newsletter-checkbox">
-        <label>
-          <input type="checkbox" name="checkbox" value="check" />
-          <span>Save my name, email, and website in this browser.</span>
-        </label>
-      </div> */}
-      <div className="contact__button">
-        <button type="submit" className="button" disabled={submitting}>
-          {submitting ? "Processing..." : "Send Message"}
-        </button>
+        <div className="col-lg-12 mt-3">
+          <button type="submit" className="btn btn-dark" disabled={submitting}>
+            {submitting ? "Processing..." : "Submit Now +"}
+          </button>
+        </div>
       </div>
     </form>
   );

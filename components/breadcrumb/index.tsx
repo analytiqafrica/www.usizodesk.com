@@ -1,26 +1,42 @@
 import { ERoutes } from "@/app/enums";
+import { useRouter } from "next/router";
+import { useBreadcrumb } from "@/app/hooks/useBreadcrumbs";
+import { useMemo } from "react";
 import Link from "next/link";
 
-export interface IBreadcrumb {
-  title: string;
-  subtitle?: string;
-}
+export default function Breadcrumb() {
+  const router = useRouter();
 
-export default function Breadcrumb({ title, subtitle }: Readonly<IBreadcrumb>) {
+  const { page, items } = useBreadcrumb();
+
+  const showBreadcrumbHeader = useMemo(
+    () => ERoutes.home !== router?.pathname,
+    [router?.pathname]
+  );
+
+  if (!showBreadcrumbHeader) {
+    return undefined;
+  }
+
   return (
-    <nav className="breadcrumb text-center" aria-label="breadcrumbs">
-      <div className="page-width">
-        <div className="row">
-          <h1 className="breadcrumb_title">{title}</h1>
-          <Link href={ERoutes.home} title="Back to the frontpage">
-            Home
-          </Link>
-          <span aria-hidden="true" className="breadcrumb__sep">
-            <i className="breadcrumb-arrow fa fa-angle-right" />
-          </span>
-          <span>{subtitle || title}</span>
-        </div>
+    <section
+      className="page-top-wrapper parallax-img"
+      data-img-src="/assets/img/bg/page-top.jpg"
+    >
+      <span className="position-absolute line-shape d-lg-block d-none">
+        <img src="/assets/img/bg/shape-2.png" alt="" />
+      </span>
+      <div className="container text-left">
+        <h2 className="text-white text-uppercase">{page}</h2>
+        <ul className="breadcrumb">
+          <li>
+            <Link href={ERoutes.home}>Home</Link>
+          </li>
+          <li>
+            <Link href=" ">{page}</Link>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </section>
   );
 }
