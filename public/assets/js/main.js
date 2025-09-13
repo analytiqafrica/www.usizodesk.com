@@ -66,51 +66,51 @@
     });
 
 
-	/*═════HERO SLIDE SCRIPTS═════*/
-	var interleaveOffset = 0.4;
-	new Swiper('.hero-slide-container', {
-		loop: true,
-		speed:1200,     
-		grabCursor: true,
-		watchSlidesProgress: true,
-		mousewheelControl: true,  
-		keyboardControl: true,
-		resistance : true, 
-		resistanceRatio : 0.5, 
-		parallax:true,
-		pagination: {
-          el: ".hero-pagination",
-          clickable: true,
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '" data-index="0'+(index + 1)+'">0' + (index + 1) + "</span>";
-          },
-        },
-		on: { 
-			progress: function() {
-			  var swiper = this;
-			  for (var i = 0; i < swiper.slides.length; i++) {
-			    var slideProgress = swiper.slides[i].progress;
-			    var innerOffset = swiper.width * interleaveOffset;
-			    var innerTranslate = slideProgress * innerOffset;
-			    swiper.slides[i].querySelector(".slide_bg").style.transform =
-			      "translate3d(" + innerTranslate + "px, 0, 0)";
-			  }      
-			},
-			touchStart: function() {
-			  var swiper = this;
-			  for (var i = 0; i < swiper.slides.length; i++) {
-			    swiper.slides[i].style.transition = "";
-			  }
-			},
-			setTransition: function(speed) {
-			  var swiper = this;
-			  for (var i = 0; i < swiper.slides.length; i++) {
-			    swiper.slides[i].style.transition = speed + "ms"; 
-			    swiper.slides[i].querySelector(".slide_bg").style.transition = speed + "ms";   
-			  }
-			}
-		}
-	}); 
+	// /*═════HERO SLIDE SCRIPTS═════*/
+	// var interleaveOffset = 0.4;
+	// new Swiper('.hero-slide-container', {
+	// 	loop: true,
+	// 	speed:1200,     
+	// 	grabCursor: true,
+	// 	watchSlidesProgress: true,
+	// 	mousewheelControl: true,  
+	// 	keyboardControl: true,
+	// 	resistance : true, 
+	// 	resistanceRatio : 0.5, 
+	// 	parallax:true,
+	// 	pagination: {
+    //       el: ".hero-pagination",
+    //       clickable: true,
+    //       renderBullet: function (index, className) {
+    //         return '<span class="' + className + '" data-index="0'+(index + 1)+'">0' + (index + 1) + "</span>";
+    //       },
+    //     },
+	// 	on: { 
+	// 		progress: function() {
+	// 		  var swiper = this;
+	// 		  for (var i = 0; i < swiper.slides.length; i++) {
+	// 		    var slideProgress = swiper.slides[i].progress;
+	// 		    var innerOffset = swiper.width * interleaveOffset;
+	// 		    var innerTranslate = slideProgress * innerOffset;
+	// 		    swiper.slides[i].querySelector(".slide_bg").style.transform =
+	// 		      "translate3d(" + innerTranslate + "px, 0, 0)";
+	// 		  }      
+	// 		},
+	// 		touchStart: function() {
+	// 		  var swiper = this;
+	// 		  for (var i = 0; i < swiper.slides.length; i++) {
+	// 		    swiper.slides[i].style.transition = "";
+	// 		  }
+	// 		},
+	// 		setTransition: function(speed) {
+	// 		  var swiper = this;
+	// 		  for (var i = 0; i < swiper.slides.length; i++) {
+	// 		    swiper.slides[i].style.transition = speed + "ms"; 
+	// 		    swiper.slides[i].querySelector(".slide_bg").style.transition = speed + "ms";   
+	// 		  }
+	// 		}
+	// 	}
+	// }); 
 
 
 	// Accourdion
@@ -174,30 +174,30 @@
 
 
 	// isotop
-	$(".portfolio-list").imagesLoaded(function () { 
-		// init Isotope
-		var $grid = $(".portfolio-list").isotope({
-			itemSelector: ".grid-item",
-			percentPosition: true,
-			masonry: {
-				columnWidth: '.grid-item'
-			}
-		});
-		// filter items on button click
-		$(".portfolio-menu").on("click", "button", function () {
-			var filterValue = $(this).attr("data-filter");
-			$grid.isotope({ filter: filterValue });
-		});
+	// $(".portfolio-list").imagesLoaded(function () { 
+	// 	// init Isotope
+	// 	var $grid = $(".portfolio-list").isotope({
+	// 		itemSelector: ".grid-item",
+	// 		percentPosition: true,
+	// 		masonry: {
+	// 			columnWidth: '.grid-item'
+	// 		}
+	// 	});
+	// 	// filter items on button click
+	// 	$(".portfolio-menu").on("click", "button", function () {
+	// 		var filterValue = $(this).attr("data-filter");
+	// 		$grid.isotope({ filter: filterValue });
+	// 	});
 
-		//for menu active class
-		$(".portfolio-menu button").on("click", function (event) {
-			$(this)
-				.siblings(".active")
-				.removeClass("active");
-			$(this).addClass("active");
-			event.preventDefault();
-		});
-	});
+	// 	//for menu active class
+	// 	$(".portfolio-menu button").on("click", function (event) {
+	// 		$(this)
+	// 			.siblings(".active")
+	// 			.removeClass("active");
+	// 		$(this).addClass("active");
+	// 		event.preventDefault();
+	// 	});
+	// });
 
 
 	// PORTFOLIO-SLIDE
