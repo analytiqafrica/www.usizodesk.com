@@ -5,7 +5,6 @@ import { Pagination, Parallax } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/parallax";
-import { useEffect } from "react";
 
 export default function HomeSlider() {
   const interleaveOffset = 0.4;
