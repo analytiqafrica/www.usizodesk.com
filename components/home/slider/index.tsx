@@ -23,7 +23,7 @@ export default function HeroSlider() {
                     Smart
                     <span className="bg-brash">
                       Ideas
-                      <img src="assets/img/icon/brash.png" alt="" />
+                      <img src="/assets/img/icon/brash.png" alt="" />
                     </span>
                     <br />
                     Our Digital Agency.
@@ -59,7 +59,7 @@ export default function HeroSlider() {
                     Smart
                     <span className="bg-brash">
                       Ideas
-                      <img src="assets/img/icon/brash.png" alt="" />
+                      <img src="/assets/img/icon/brash.png" alt="" />
                     </span>
                     <br />
                     Our Digital Agency.
@@ -98,7 +98,7 @@ export default function HeroSlider() {
                     Smart
                     <span className="bg-brash">
                       Ideas
-                      <img src="assets/img/icon/brash.png" alt="" />
+                      <img src="/assets/img/icon/brash.png" alt="" />
                     </span>
                     <br />
                     Our Digital Agency.

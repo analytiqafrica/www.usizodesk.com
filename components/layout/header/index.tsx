@@ -1,6 +1,7 @@
 import { ERoutes } from "@/app/enums";
 import { IDimensions } from "@/app/types";
 import { useEffect, useState } from "react";
+import { HeaderContainer } from "../styles";
 import Link from "next/link";
 import Menu from "./menu";
 
@@ -32,12 +33,12 @@ export default function Header() {
   }, [hasWindow]);
 
   return (
-    <header className="header-area header-style-2">
+    <HeaderContainer className="header-area header-style-2">
       <nav className="header-main">
         <div className="container-fluid">
           <div className="navbar">
             <Link className="navbar-brand mr-auto" href={ERoutes.home}>
-              <img src="assets/img/logo-light.png" alt="Usizo" />
+              <img src="/assets/img/logo.webp" alt="Usizo" />
             </Link>
             <div id="header-bottom-toggle" className="navbar-nav-wrapper">
               <Menu />
@@ -95,6 +96,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </HeaderContainer>
   );
 }

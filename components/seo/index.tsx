@@ -28,7 +28,7 @@ export default function Seo(props: Readonly<ISeoProps>) {
       <meta property="og:description" content="Usizo Support Desk" />
       <meta property="og:image" content="" />
 
-      <link rel="icon" href="/assets/img/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
 
       <link rel="stylesheet" href="/assets/css/normalize.css" />
       <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
@@ -36,6 +36,25 @@ export default function Seo(props: Readonly<ISeoProps>) {
       <link rel="stylesheet" href="/assets/css/swiper.min.css" />
       <link rel="stylesheet" href="/assets/css/animate.css" />
       <link rel="stylesheet" href="/assets/css/style.css" />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
     </Head>
   );
 }

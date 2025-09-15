@@ -1,19 +1,20 @@
 import { ERoutes } from "@/app/enums";
+import { FooterContainer } from "../styles";
 import Link from "next/link";
 import moment from "moment";
 
 export default function Footer() {
   return (
-    <footer className="footer-area sec-pt-150 bg-dark">
+    <FooterContainer className="footer-area sec-pt-150 bg-dark">
       <div className="footer-top">
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6 mb-30">
               <div className="footer-wrapper">
                 <div className="footer-logo">
-                  <a href=" ">
-                    <img src="/assets/img/logo-light.png" alt="" />
-                  </a>
+                  <Link href={ERoutes.home}>
+                    <img src="/assets/img/logo.webp" alt="Usizo" />
+                  </Link>
                 </div>
                 <div className="footer-text">
                   <p>
@@ -142,6 +143,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </FooterContainer>
   );
 }
